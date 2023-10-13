@@ -16,7 +16,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
 
 function Nav(props) {
   const { window } = props;
@@ -35,10 +34,22 @@ function Nav(props) {
       <List sx={{ display: "flex" }}>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center", flexDirection: "column" }}>
-            <ListItemText> Home</ListItemText>
-            <ListItemText> About</ListItemText>
-            <ListItemText> More</ListItemText>
-            <ListItemText> Contact</ListItemText>
+            <ListItemText component="a" href="/">
+              {" "}
+              Home
+            </ListItemText>
+            <ListItemText component="a" href="/#about">
+              {" "}
+              About
+            </ListItemText>
+            <ListItemText component="a" href="/more">
+              {" "}
+              More
+            </ListItemText>
+            <ListItemText component="a" href="/contact">
+              {" "}
+              Contact
+            </ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
@@ -107,7 +118,9 @@ function Nav(props) {
           }}
         >
           {drawer}
-          <Button variant="contained">Enroll a child</Button>
+          <Button component="a" href="/enroll" variant="contained">
+            Enroll a child
+          </Button>
         </Drawer>
       </nav>
     </Box>
