@@ -23,8 +23,8 @@ export default function Contact() {
 
       <Grid
         component="form"
-        action="https://formspree.io/f/mpzgognj"
-        method="POST"
+        // action="https://formspree.io/f/mpzgognj"
+        // method="POST"
         container
         columnSpacing={2}
       >
