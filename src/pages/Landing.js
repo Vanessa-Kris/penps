@@ -53,68 +53,7 @@ export default function Landing() {
         </Grid>
       </Grid>
       {/* About */}
-      <Box
-        sx={{ mx: { md: 18, xs: 3, sm: 3 }, my: { md: 18, xs: 7, sm: 7 } }}
-        id="about"
-      >
-        <Grid
-          container
-          spacing={8}
-          alignItems="center"
-          justifyContent="space-evenly"
-        >
-          <Grid item md={6} sm={6} xs={12}>
-            <Box
-              component="img"
-              src="https://img.freepik.com/free-photo/medium-shot-boy-portrait-with-graduation-background_23-2150293635.jpg?size=626&ext=jpg&ga=GA1.2.1563347392.1696364341&semt=ais"
-              sx={{ width: "100%" }}
-            />
-          </Grid>
-          <Grid item md={6} sm={6} xs={12}>
-            <Typography variant="h3" sx={{ mb: { md: 4, sm: 4, xs: 3 } }}>
-              About us
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 3 }}>
-              At PENPS, we provide a holistic education that fosters academic
-              excellence while also nurturing a deep sense of morality and
-              spirituality in our students. Our dedicated staff and cutting-edge
-              educational programs are designed to empower your children to
-              excel in all aspects of their lives.
-            </Typography>
-            <Link>Learn more</Link>
-          </Grid>
-        </Grid>
-      </Box>
-      {/* Vision */}
-      <Box sx={{ mx: { md: 18, xs: 3, sm: 3 }, my: { md: 18, xs: 7, sm: 7 } }}>
-        <Grid
-          container
-          spacing={8}
-          alignItems="center"
-          justifyContent="space-evenly"
-        >
-          <Grid item md={6} sm={6} xs={12}>
-            <Typography variant="h3" sx={{ mb: { md: 4, sm: 4, xs: 3 } }}>
-              Vision
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 3 }}>
-              We are dedicated to nurturing future champions. Our mission is to
-              inspire and guide young minds to become brilliant, virtuous, and
-              God-fearing individuals. We believe that education is not just
-              about academic excellence, but also about instilling strong values
-              and character.
-            </Typography>
-            <Link>Learn more</Link>
-          </Grid>
-          <Grid item md={6} sm={6} xs={12}>
-            <Box
-              component="img"
-              src="https://img.freepik.com/free-photo/girl-with-globe-books-studio_23-2147851858.jpg?size=626&ext=jpg&ga=GA1.2.1563347392.1696364341&semt=ais"
-              sx={{ width: "100%" }}
-            />
-          </Grid>
-        </Grid>
-      </Box>
+
       {/* Values */}
       <Box sx={{ mx: { md: 18, xs: 3, sm: 3 }, my: { md: 18, xs: 7, sm: 7 } }}>
         <Grid
