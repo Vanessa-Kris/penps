@@ -21,21 +21,53 @@ const drawerWidth = 240;
 function Nav(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  // const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const [aboutOpen, setAboutPopoverOpen] = React.useState(false);
+  const [childrenOpen, setChildrenPopoverOpen] = React.useState(false);
+  const [parentsOpen, setParentsPopoverOpen] = React.useState(false);
+  const [newsOpen, setNewsPopoverOpen] = React.useState(false);
+
+  const handleAboutPopoverOpen = (event) => {
+    setAboutPopoverOpen(event.currentTarget);
+  };
+  const handleAboutPopoverClose = () => {
+    setAboutPopoverOpen(null);
+  };
+
+  const handleChildrenPopoverOpen = (event) => {
+    setChildrenPopoverOpen(event.currentTarget);
+  };
+  const handleChildrenPopoverClose = () => {
+    setChildrenPopoverOpen(null);
+  };
+
+  const handleParentsPopoverOpen = (event) => {
+    setParentsPopoverOpen(event.currentTarget);
+  };
+  const handleParentsPopoverClose = () => {
+    setParentsPopoverOpen(null);
+  };
+
+  const handleNewsPopoverOpen = (event) => {
+    setNewsPopoverOpen(event.currentTarget);
+  };
+  const handleNewsPopoverClose = () => {
+    setNewsPopoverOpen(null);
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const handlePopoverOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  const open = Boolean(aboutOpen, childrenOpen, parentsOpen, newsOpen);
+  // const handlePopoverOpen = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
 
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
+  // const handlePopoverClose = () => {
+  //   setAnchorEl(null);
+  // };
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -102,16 +134,16 @@ function Nav(props) {
             </Button>
 
             <Button
-              aria-owns={open ? "mouse-over-popover" : undefined}
-              onMouseEnter={handlePopoverOpen}
+              aria-owns={open ? "about-popover" : undefined}
+              onMouseEnter={handleAboutPopoverOpen}
               sx={{ mr: 2 }}
             >
               About Us
             </Button>
             <Popover
-              id="mouse-over-popover"
-              open={open}
-              anchorEl={anchorEl}
+              id="about-popover"
+              open={aboutOpen}
+              anchorEl={aboutOpen}
               anchorOrigin={{
                 vertical: "bottom",
                 horizontal: "left",
@@ -120,8 +152,8 @@ function Nav(props) {
                 vertical: "top",
                 horizontal: "left",
               }}
-              onMouseLeave={handlePopoverClose}
-              onClick={handlePopoverClose}
+              onMouseLeave={handleAboutPopoverClose}
+              onClick={handleAboutPopoverClose}
             >
               <Button component="a" href="/#about" sx={{ p: 1 }}>
                 Our Vision
@@ -140,16 +172,16 @@ function Nav(props) {
               </Button>
             </Popover>
             <Button
-              aria-owns={open ? "mouse-over-popover" : undefined}
-              onMouseEnter={handlePopoverOpen}
+              aria-owns={open ? "children-popover" : undefined}
+              onMouseEnter={handleChildrenPopoverOpen}
               sx={{ mr: 2 }}
             >
               Children
             </Button>
             <Popover
-              id="mouse-over-popover"
-              open={open}
-              anchorEl={anchorEl}
+              id="children-popover"
+              open={childrenOpen}
+              anchorEl={childrenOpen}
               anchorOrigin={{
                 vertical: "bottom",
                 horizontal: "left",
@@ -158,8 +190,8 @@ function Nav(props) {
                 vertical: "top",
                 horizontal: "left",
               }}
-              onMouseLeave={handlePopoverClose}
-              onClick={handlePopoverClose}
+              onMouseLeave={handleChildrenPopoverClose}
+              onClick={handleChildrenPopoverClose}
             >
               <Button component="a" href="/#about" sx={{ p: 1 }}>
                 Curriculum
@@ -178,8 +210,8 @@ function Nav(props) {
               </Button>
             </Popover>
             <Button
-              aria-owns={open ? "mouse-over-popover" : undefined}
-              onMouseEnter={handlePopoverOpen}
+              aria-owns={open ? "parents-popover" : undefined}
+              onMouseEnter={handleParentsPopoverOpen}
               component="a"
               href="/more"
               sx={{ mr: 2 }}
@@ -187,9 +219,9 @@ function Nav(props) {
               Parents
             </Button>
             <Popover
-              id="mouse-over-popover"
-              open={open}
-              anchorEl={anchorEl}
+              id="parents-popover"
+              open={parentsOpen}
+              anchorEl={parentsOpen}
               anchorOrigin={{
                 vertical: "bottom",
                 horizontal: "left",
@@ -198,8 +230,8 @@ function Nav(props) {
                 vertical: "top",
                 horizontal: "left",
               }}
-              onMouseLeave={handlePopoverClose}
-              onClick={handlePopoverClose}
+              onMouseLeave={handleParentsPopoverClose}
+              onClick={handleParentsPopoverClose}
             >
               <Button component="a" href="/#about" sx={{ p: 1 }}>
                 Activities
@@ -214,8 +246,8 @@ function Nav(props) {
               </Button>
             </Popover>
             <Button
-              aria-owns={open ? "mouse-over-popover" : undefined}
-              onMouseEnter={handlePopoverOpen}
+              aria-owns={open ? "news-popover" : undefined}
+              onMouseEnter={handleNewsPopoverOpen}
               component="a"
               href="/more"
               sx={{ mr: 2 }}
@@ -223,9 +255,9 @@ function Nav(props) {
               News & Events
             </Button>
             <Popover
-              id="mouse-over-popover"
-              open={open}
-              anchorEl={anchorEl}
+              id="news-popover"
+              open={newsOpen}
+              anchorEl={newsOpen}
               anchorOrigin={{
                 vertical: "bottom",
                 horizontal: "left",
@@ -234,8 +266,8 @@ function Nav(props) {
                 vertical: "top",
                 horizontal: "left",
               }}
-              onMouseLeave={handlePopoverClose}
-              onClick={handlePopoverClose}
+              onMouseLeave={handleNewsPopoverClose}
+              onClick={handleNewsPopoverClose}
             >
               <Button component="a" href="/#about" sx={{ p: 1 }}>
                 Gallery
