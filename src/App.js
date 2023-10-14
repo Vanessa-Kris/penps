@@ -3,13 +3,25 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Landing from "./pages/Landing";
-import More from "./pages/More";
+import Vision from "./pages/Vision";
 import Contact from "./pages/Contact";
 import Enroll from "./pages/Enroll";
-import Pay from "./pages/Pay";
 import PageNotFound from "./pages/404";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Governors from "./pages/Governors";
+import Staffs from "./pages/Staffs";
+import Policy from "./pages/Policy";
+import Curriculum from "./pages/Curriculum";
+import Special from "./pages/Special";
+import HomeTutor from "./pages/HomeTraining";
+import Admission from "./pages/Admission";
+import SchoolKit from "./pages/SchoolKit";
+import Activities from "./pages/Activities";
+import PDF from "./pages/PDF";
+import Gallery from "./pages/Gallery";
+import Events from "./pages/Events";
+import News from "./pages/News";
 
 let theme = createTheme({
   palette: {
@@ -30,8 +42,8 @@ function App() {
       element: <Landing />,
     },
     {
-      path: "/more",
-      element: <More />,
+      path: "/vision",
+      element: <Vision />,
     },
     {
       path: "/contact",
@@ -42,8 +54,56 @@ function App() {
       element: <Enroll />,
     },
     {
-      path: "/pay",
-      element: <Pay />,
+      path: "/governors",
+      element: <Governors />,
+    },
+    {
+      path: "/staffs",
+      element: <Staffs />,
+    },
+    {
+      path: "/policy",
+      element: <Policy />,
+    },
+    {
+      path: "/curriculum",
+      element: <Curriculum />,
+    },
+    {
+      path: "/special-education",
+      element: <Special />,
+    },
+    {
+      path: "/home-tutoring",
+      element: <HomeTutor />,
+    },
+    {
+      path: "/admission",
+      element: <Admission />,
+    },
+    {
+      path: "/school-kit",
+      element: <SchoolKit />,
+    },
+    {
+      path: "/activities",
+      element: <Activities />,
+    },
+    {
+      path: "/school-pdfs",
+      element: <PDF />,
+    },
+    {
+      path: "/gallery",
+      element: <Gallery />,
+    },
+    {
+      path: "/events",
+      element: <Events />,
+    },
+    {
+      path: "/news",
+      element: <News />,
     },
     {
       path: "*",

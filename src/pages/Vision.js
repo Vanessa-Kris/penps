@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 import React from "react";
 
-export default function More() {
+export default function Vision() {
   return (
     <>
       <Box sx={{ m: { md: 15, sm: 15, xs: 3 }, pt: { xs: 7, sm: 0, md: 0 } }}>

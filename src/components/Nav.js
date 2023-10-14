@@ -155,19 +155,19 @@ function Nav(props) {
               onMouseLeave={handleAboutPopoverClose}
               onClick={handleAboutPopoverClose}
             >
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/vision" sx={{ p: 1 }}>
                 Our Vision
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/policy" sx={{ p: 1 }}>
                 Policies
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/governors" sx={{ p: 1 }}>
                 Governors
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/staffs" sx={{ p: 1 }}>
                 Staffs
               </Button>
             </Popover>
@@ -193,19 +193,19 @@ function Nav(props) {
               onMouseLeave={handleChildrenPopoverClose}
               onClick={handleChildrenPopoverClose}
             >
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/curriculum" sx={{ p: 1 }}>
                 Curriculum
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/special-educationt" sx={{ p: 1 }}>
                 Special Education
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/home-tutoring" sx={{ p: 1 }}>
                 Home tutoring
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/admission" sx={{ p: 1 }}>
                 Admission
               </Button>
             </Popover>
@@ -233,15 +233,15 @@ function Nav(props) {
               onMouseLeave={handleParentsPopoverClose}
               onClick={handleParentsPopoverClose}
             >
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/activities" sx={{ p: 1 }}>
                 Activities
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/school-kit" sx={{ p: 1 }}>
                 School Kit
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/school-pdfs" sx={{ p: 1 }}>
                 School pdfs
               </Button>
             </Popover>
@@ -269,15 +269,15 @@ function Nav(props) {
               onMouseLeave={handleNewsPopoverClose}
               onClick={handleNewsPopoverClose}
             >
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/gallery" sx={{ p: 1 }}>
                 Gallery
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/events" sx={{ p: 1 }}>
                 Events
               </Button>
               <br />
-              <Button component="a" href="/#about" sx={{ p: 1 }}>
+              <Button component="a" href="/news" sx={{ p: 1 }}>
                 Latest News
               </Button>
               <br />
