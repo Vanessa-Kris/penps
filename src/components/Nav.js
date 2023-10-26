@@ -197,7 +197,7 @@ function Nav(props) {
                 Curriculum
               </Button>
               <br />
-              <Button component="a" href="/special-educationt" sx={{ p: 1 }}>
+              <Button component="a" href="/special-education" sx={{ p: 1 }}>
                 Special Education
               </Button>
               <br />

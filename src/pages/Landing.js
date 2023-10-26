@@ -1,5 +1,5 @@
 import { Check } from "@mui/icons-material";
-import { Box, Button, Grid, Link, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import GoogleMapReact from "google-map-react";
 
@@ -227,7 +227,7 @@ export default function Landing() {
       <Box sx={{ my: { md: 18, xs: 7, sm: 7 } }}>
         <Grid
           container
-          columnSpacing={7}
+          columnSpacing={8}
           alignItems="center"
           justifyContent="space-evenly"
         >
@@ -247,7 +247,7 @@ export default function Landing() {
             </div>
           </Grid>
           <Grid item md={5} sm={5} xs={12}>
-            <Typography variant="h3" sx={{ pb: 3 }}>
+            <Typography variant="h3" sx={{ py: 4 }}>
               Visit our school
             </Typography>
             <Typography variant="p">
